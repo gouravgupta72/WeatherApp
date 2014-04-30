@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n8I-rW-ovm"/>
+                        <viewControllerLayoutGuide type="bottom" id="K5p-SI-OAc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="avR-VG-TJh">
+                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="igA-C0-WNB"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Qd-hT-P6I">
+                                <rect key="frame" x="0.0" y="62" width="320" height="506"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="nkX-Ii-4q3"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="z4v-mK-LW3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3Qd-hT-P6I" secondAttribute="bottom" id="225-Vt-Ebi"/>
+                            <constraint firstAttribute="bottom" secondItem="avR-VG-TJh" secondAttribute="bottom" constant="506" id="5ii-ju-rJc"/>
+                            <constraint firstItem="3Qd-hT-P6I" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FIA-Ea-gXy"/>
+                            <constraint firstAttribute="trailing" secondItem="3Qd-hT-P6I" secondAttribute="trailing" id="HYm-IC-D2f"/>
+                            <constraint firstAttribute="trailing" secondItem="avR-VG-TJh" secondAttribute="trailing" id="QJJ-VQ-dq5"/>
+                            <constraint firstItem="3Qd-hT-P6I" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="62" id="XYz-AN-Mlz"/>
+                            <constraint firstItem="avR-VG-TJh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gjk-xK-DfP"/>
+                            <constraint firstItem="avR-VG-TJh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="18" id="vvo-sv-ahC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchTab" destination="avR-VG-TJh" id="m5D-I3-qpZ"/>
+                        <outlet property="tblWeather" destination="3Qd-hT-P6I" id="Xgf-Zc-nB5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
